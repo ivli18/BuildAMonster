@@ -26,9 +26,7 @@ class Monster extends Phaser.Scene {
         let my = this.my;   // create an alias to this.my for readability
 
         // Create the main body sprite
-        //
         // this.add.sprite(x,y, "{atlas key name}", "{name of sprite within atlas}")
-        //
         // look in spritesheet_default.xml for the individual sprite names
         // You can also download the asset pack and look in the PNG/default folder.
         my.sprite.body = this.add.sprite(this.bodyX, this.bodyY, "monsterParts", "body_whiteA.png");
@@ -41,7 +39,6 @@ class Monster extends Phaser.Scene {
         my.sprite.LegL.setScale(1.75, 1.3);
         my.sprite.LegR = this.add.sprite(this.bodyX+110, this.bodyY+legsH, "monsterParts", "leg_darkC.png").setDepth(-1);
         my.sprite.LegR.setScale(1.75, 1.3);
-
 
         // Arms
         let armsH = 30;
@@ -72,9 +69,6 @@ class Monster extends Phaser.Scene {
         my.sprite.Horn1.setScale(1.3, 1.3);
         my.sprite.Horn2 = this.add.sprite(this.bodyX+160, this.bodyY+hornH, "monsterParts", "detail_yellow_horn_large.png");
         my.sprite.Horn2.setScale(1.3, 1.3);
-
-
-
 
         // Input Handling
         this.keys = this.input.keyboard.addKeys("S,F,A,D");
